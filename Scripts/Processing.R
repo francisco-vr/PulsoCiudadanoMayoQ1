@@ -8,11 +8,11 @@ library("summarytools")
 
 #cargamos base de datos
 
-Pulso <- read_spss("Original Data/BBDD_Pulso Abril Q2_.sav")
+Pulso <- read_spss("Original Data/BBDD_Mayo_Q1.sav")
 
 #Selección de variables de interés
 
-Pulso <-select(Pulso,SEXO,EDAD,RANGOEDAD,GSE_COD,ZONA,REGION,DISTRITO_ELECTORAL,P1:P69,P156:P162,P216:PONDERADOR)
+Pulso <-select(Pulso,SEXO,EDAD,RANGOEDAD,GSE_COD,ZONA,REGION,DISTRITO_ELECTORAL,P1:P69,P156:P162,P236:PONDERADOR)
 
 #Recodificación de variables y nombres de variables
 
@@ -51,9 +51,7 @@ freq(Pulso$P11_COD, weights = Pulso$PONDERADOR)
 
 Pulso$P11_COD <-as.numeric(Pulso$P11_COD)
 class(Pulso$P12_COD)
-jiles <-filter(Pulso, P12_COD==45)
 
-saveRDS(jiles, file = "Original Data/Jiles.rds")
 
 saveRDS(Pulso, file = "Original Data/Pulso_Ciudadano.rds")
 

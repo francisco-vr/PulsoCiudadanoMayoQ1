@@ -100,7 +100,7 @@ SexoPlot <-ggplot(data = subset(voto, !is.na(Candi)),
   geom_bar(position = "dodge") + 
   labs(title = "Sexo de votantes",
        x = "Sexo", y = "Porcentaje",
-       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Segunda Quincena de Abril 2021") +
+       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Primera Quincera de Mayo 2021") +
   xlab("Sexo") + ylab("Porcentaje") +
   geom_text(stat = 'count',
             position = position_dodge(.9), 
@@ -128,7 +128,7 @@ GSEPlot <-ggplot(data = subset(voto, !is.na(GSERecod)),
   geom_bar(position = "dodge") + 
   labs(title = "GSE de votantes",
        x = "GSE", y = "Porcentaje",
-       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Segunda Quincena de Abril 2021") +
+       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Primera Quincera de Mayo 2021") +
   xlab("GSE") + ylab("Porcentaje") +
   geom_text(stat = 'count',
             position = position_dodge(.9), 
@@ -156,7 +156,7 @@ LaborPlot <-ggplot(data = subset(voto, !is.na(Candi)),
   geom_bar(position = "dodge") + 
   labs(title = "Situación laboral según candidato",
        x = "GSE", y = "Porcentaje",
-       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Segunda Quincena de Abril 2021") +
+       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Primera Quincera de Mayo 2021") +
   xlab("Candidato") + ylab("Porcentaje") +
   geom_text(stat = 'count',
             position = position_dodge(.9), 
@@ -184,7 +184,7 @@ MoniPlot <-ggplot(data = subset(voto, !is.na(Candi)),
   geom_bar(position = "dodge") +
   labs(title = "¿Alcanza el dinero que gana hasta fin de mes?",
        x = "GSE", y = "Porcentaje",
-       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Segunda Quincena de Abril 2021") +
+       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Primera Quincera de Mayo 2021") +
   geom_text(stat = 'count',
             position = position_dodge(.9), 
             vjust = -0.5, 
@@ -214,7 +214,7 @@ PolitPlot <-ggplot(data = subset(voto, !is.na(PosPol)),
   geom_bar(position = "dodge") +
     labs(title = "Posición política, según voto de candidatos",
        x = "Posición Política", y = "Porcentaje",
-       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Segunda Quincena de Abril 2021") +
+       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Primera Quincera de Mayo 2021") +
   geom_text(stat = 'count',
             position = position_dodge(.9), 
             vjust = -0.5, 
@@ -241,7 +241,7 @@ PartiPlot <-ggplot(data = subset(voto, !is.na(Candi)),
   geom_bar(position = "dodge") +
   labs(title = "Posición ante el Gobierno de Sebatían Piñera, según candidatos al que votaría",
        x = "Posición Política", y = "Porcentaje",
-       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Segunda Quincena de Abril 2021") +
+       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Primera Quincera de Mayo 2021") +
   geom_text(stat = 'count',
             position = position_dodge(.9), 
             vjust = -0.5, 
@@ -272,7 +272,7 @@ Problem1Plot <-ggplot(data = subset(voto, !is.na(P10_1)),
   geom_bar(position = "dodge") +
   labs(title = "Problema principal del País, según voto",
        x = "Problema Principal", y = "Porcentaje",
-       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Segunda Quincena de Abril 2021") +
+       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Primera Quincera de Mayo 2021") +
   xlab("Problema principal") + ylab("Porcentaje") +
   scale_fill_manual("Candidato",
                     values = c("#FF6666", "#00CC66", "#CC0000", "#FF9999"),
@@ -288,7 +288,7 @@ Problem1Plot <-ggplot(data = subset(voto, !is.na(P10_1)),
   facet_wrap(~Candi, nrow = 4)
 plot(Problem1Plot)
 
-ggsave(Problem1Plot, filename = "resultados/GrafSex.png",
+ggsave(Problem1Plot, filename = "resultados/Problem1Plot.png",
        dpi = 400, width = 8, height = 7)
 
 # Segundo más importante
@@ -301,7 +301,7 @@ Problem2Plot <-ggplot(data = subset(voto, !is.na(P10_1)),
   geom_bar(position = "dodge") +
   labs(title = "Segundo problema principal del País, según voto",
        x = "Problema Principal", y = "Porcentaje",
-       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Segunda Quincena de Abril 2021") +
+       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Primera Quincera de Mayo 2021") +
   xlab("Problema principal") + ylab("Porcentaje") +
   geom_text(stat = 'count',
             position = position_dodge(.9), 
@@ -328,7 +328,7 @@ Problem3Plot <-ggplot(data = subset(voto, !is.na(P10_3)),
   geom_bar(position = "dodge") +
   labs(title = "Tercer problema principal del país, según voto",
        x = "Problema Principal", y = "Porcentaje",
-       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Segunda Quincena de Abril 2021") +
+       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Primera Quincera de Mayo 2021") +
   xlab("Problema principal") + ylab("Porcentaje") +
   geom_text(stat = 'count',
             position = position_dodge(.9), 
@@ -360,7 +360,7 @@ HappyPlot <-ggplot(data = subset(voto, !is.na(Felici)),
   geom_bar(position = "dodge") +
   labs(title = "Grado de felicidad, según votante",
        x = "Grado de felicidad", y = "Porcentaje",
-       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Segunda Quincena de Abril 2021") +
+       caption = "Fuente: Elaboración propia, basada en Encuesta Pulso Ciudadano. Primera Quincera de Mayo 2021") +
   geom_text(stat = 'count',
             position = position_dodge(.9), 
             vjust = -0.5, 
@@ -452,3 +452,4 @@ view(TablaFelici)
 tablas <-list(TablaEdad, TablaGSE, TablaSexo, TablaLabor, TablaMoni, TablaPosPol, TablaParti, TablaFelici)
 
 saveRDS(tablas, file = "Results/tablas.rds")
+
